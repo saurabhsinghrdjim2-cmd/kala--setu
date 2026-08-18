@@ -1,0 +1,1006 @@
+/* =========================================
+   GLOBAL
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    background: #fffaf3;
+    color: #4a171c;
+}
+
+
+/* =========================================
+   SPLASH SCREEN
+========================================= */
+
+#splash-screen {
+    position: fixed;
+    inset: 0;
+
+    background: #6d1f2b;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 9999;
+
+    animation: splashExit 1s ease forwards;
+
+    animation-delay: 4.5s;
+}
+
+
+.splash-content {
+    text-align: center;
+    color: #fffaf3;
+}
+
+
+.logo-symbol {
+    font-size: 55px;
+
+    margin-bottom: 15px;
+
+    animation: symbolAppear 1s ease;
+}
+
+
+.splash-content h1 {
+    font-size: 55px;
+
+    letter-spacing: 8px;
+
+    margin-bottom: 12px;
+
+    animation: textAppear 1.2s ease;
+}
+
+
+.splash-content p {
+    font-size: 20px;
+
+    font-style: italic;
+
+    letter-spacing: 3px;
+
+    animation: textAppear 1.6s ease;
+}
+
+
+.loading-line {
+    width: 0;
+
+    height: 2px;
+
+    background: #fffaf3;
+
+    margin: 30px auto 0;
+
+    animation: loading 4.3s linear forwards;
+}
+
+
+/* =========================================
+   SPLASH ANIMATIONS
+========================================= */
+
+@keyframes symbolAppear {
+
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+}
+
+
+@keyframes textAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+@keyframes loading {
+
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 180px;
+    }
+
+}
+
+
+@keyframes splashExit {
+
+    from {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+}
+
+
+/* =========================================
+   MAIN CONTENT
+========================================= */
+
+#main-content {
+    min-height: 100vh;
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar {
+    height: 75px;
+
+    padding: 0 7%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    background: #fffaf3;
+
+    border-bottom: 1px solid #ead8ca;
+}
+
+
+.brand {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    font-size: 20px;
+}
+
+
+.brand-symbol {
+    font-size: 24px;
+}
+
+
+.nav-links {
+    display: flex;
+
+    gap: 35px;
+}
+
+
+.nav-links a {
+    text-decoration: none;
+
+    color: #4a171c;
+
+    font-size: 15px;
+
+    transition: 0.3s;
+}
+
+
+.nav-links a:hover {
+    color: #a33b45;
+}
+
+
+.language-selector button {
+    background: transparent;
+
+    border: 1px solid #6d1f2b;
+
+    color: #6d1f2b;
+
+    padding: 8px 14px;
+
+    border-radius: 20px;
+
+    cursor: pointer;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+    min-height: 650px;
+
+    padding: 80px 10%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    background:
+        radial-gradient(
+            circle at 80% 30%,
+            #f3ddd1 0%,
+            #fffaf3 35%
+        );
+}
+
+
+.hero-content {
+    max-width: 600px;
+}
+
+
+.small-heading {
+    font-size: 13px;
+
+    letter-spacing: 4px;
+
+    color: #9a5b52;
+
+    margin-bottom: 20px;
+}
+
+
+.hero h1 {
+    font-size: 65px;
+
+    line-height: 1.05;
+
+    margin-bottom: 25px;
+}
+
+
+.hero h1 span {
+    color: #8d303b;
+
+    font-style: italic;
+}
+
+
+.hero-description {
+    font-family: Arial, sans-serif;
+
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    color: #684b48;
+
+    max-width: 500px;
+
+    margin-bottom: 35px;
+}
+
+
+.primary-button,
+.create-button,
+.ai-button {
+    border: none;
+
+    background: #6d1f2b;
+
+    color: white;
+
+    padding: 15px 28px;
+
+    border-radius: 5px;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.primary-button:hover,
+.create-button:hover,
+.ai-button:hover {
+    background: #8d303b;
+
+    transform: translateY(-2px);
+}
+
+
+.hero-art {
+    width: 400px;
+
+    height: 400px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+
+.art-circle {
+    width: 300px;
+
+    height: 300px;
+
+    border-radius: 50%;
+
+    background: #ead0c2;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 100px;
+
+    border: 8px double #8d303b;
+}
+
+
+/* =========================================
+   SECTION COMMON
+========================================= */
+
+.craftpulse,
+.product-section,
+.listing-section {
+    padding: 100px 10%;
+}
+
+
+.section-heading {
+    text-align: center;
+
+    margin-bottom: 60px;
+}
+
+
+.section-heading p {
+    font-family: Arial, sans-serif;
+
+    font-size: 12px;
+
+    letter-spacing: 4px;
+
+    color: #a15c50;
+
+    margin-bottom: 10px;
+}
+
+
+.section-heading h2 {
+    font-size: 45px;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 10px;
+}
+
+
+.section-heading span {
+    color: #80504a;
+
+    font-style: italic;
+}
+
+
+/* =========================================
+   CRAFTPULSE
+========================================= */
+
+.craftpulse {
+    background: #f4e5d9;
+
+    border-top: 1px solid #ead0c2;
+
+    border-bottom: 1px solid #ead0c2;
+}
+
+
+.craft-actions {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 30px;
+
+    margin-bottom: 45px;
+}
+
+
+.action-card {
+    width: 330px;
+
+    padding: 40px;
+
+    background: #fffaf3;
+
+    text-align: center;
+
+    border: 1px solid #ddc2b5;
+
+    border-radius: 8px;
+
+    transition: 0.3s;
+}
+
+
+.action-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 15px 30px rgba(80, 30, 30, 0.1);
+}
+
+
+.action-icon {
+    font-size: 45px;
+
+    margin-bottom: 20px;
+}
+
+
+.action-card h3 {
+    margin-bottom: 15px;
+
+    letter-spacing: 2px;
+}
+
+
+.action-card p {
+    font-family: Arial, sans-serif;
+
+    color: #765b56;
+
+    line-height: 1.6;
+
+    margin-bottom: 25px;
+}
+
+
+.action-card button {
+    background: transparent;
+
+    border: 1px solid #6d1f2b;
+
+    color: #6d1f2b;
+
+    padding: 10px 20px;
+
+    cursor: pointer;
+
+    border-radius: 4px;
+}
+
+
+.create-button {
+    display: block;
+
+    margin: auto;
+}
+
+
+/* =========================================
+   PRODUCT
+========================================= */
+
+.product-section {
+    background: #fffaf3;
+}
+
+
+.product-card {
+    max-width: 850px;
+
+    margin: auto;
+
+    padding: 45px;
+
+    background: white;
+
+    border: 1px solid #e5cfc1;
+
+    box-shadow: 0 10px 30px rgba(70, 30, 30, 0.07);
+}
+
+
+.product-image {
+    height: 300px;
+
+    background: #eaded4;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    color: #8c655e;
+
+    margin-bottom: 30px;
+}
+
+
+.product-story {
+    background: #fff8f0;
+
+    padding: 25px;
+
+    margin-bottom: 25px;
+}
+
+
+.story-label {
+    font-weight: bold;
+
+    margin-bottom: 15px;
+}
+
+
+.product-story p {
+    font-style: italic;
+
+    color: #684b48;
+
+    line-height: 1.6;
+}
+
+
+.ai-button {
+    display: block;
+
+    margin: auto;
+}
+
+
+/* =========================================
+   LISTING
+========================================= */
+
+.listing-section {
+    background: #f4e5d9;
+}
+
+
+.listing-card {
+    max-width: 850px;
+
+    margin: auto;
+
+    background: #fffaf3;
+
+    padding: 45px;
+
+    border: 1px solid #ddc2b5;
+}
+
+
+.listing-card h3 {
+    font-size: 32px;
+
+    margin-bottom: 20px;
+}
+
+
+.listing-description {
+    font-family: Arial, sans-serif;
+
+    color: #684b48;
+
+    line-height: 1.7;
+
+    margin-bottom: 30px;
+}
+
+
+.listing-info {
+    display: flex;
+
+    gap: 50px;
+
+    border-top: 1px solid #e2cfc3;
+
+    border-bottom: 1px solid #e2cfc3;
+
+    padding: 25px 0;
+
+    margin-bottom: 30px;
+}
+
+
+.listing-info div {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+
+.listing-info span {
+    font-size: 12px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+
+    color: #9a6a62;
+}
+
+
+.listing-info strong {
+    font-family: Arial, sans-serif;
+
+    font-size: 14px;
+}
+
+
+.listing-actions {
+    display: flex;
+
+    gap: 10px;
+
+    flex-wrap: wrap;
+}
+
+
+.listing-actions button {
+    padding: 10px 16px;
+
+    border: 1px solid #6d1f2b;
+
+    background: transparent;
+
+    color: #6d1f2b;
+
+    cursor: pointer;
+
+    border-radius: 4px;
+}
+
+
+.listing-actions .share-button {
+    background: #6d1f2b;
+
+    color: white;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    background: #6d1f2b;
+
+    color: #fffaf3;
+
+    text-align: center;
+
+    padding: 50px 20px;
+}
+
+
+footer p {
+    margin-top: 12px;
+
+    font-style: italic;
+}
+
+
+footer .copyright {
+    font-family: Arial, sans-serif;
+
+    font-size: 12px;
+
+    opacity: 0.7;
+
+    margin-top: 30px;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .nav-links {
+        display: none;
+    }
+
+    .hero {
+        flex-direction: column;
+
+        text-align: center;
+
+        gap: 50px;
+    }
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+    .hero-art {
+        width: 300px;
+
+        height: 300px;
+    }
+
+    .art-circle {
+        width: 220px;
+
+        height: 220px;
+    }
+
+    .craft-actions {
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+    .action-card {
+        width: 100%;
+
+        max-width: 350px;
+    }
+
+    .listing-info {
+        flex-direction: column;
+
+        gap: 20px;
+    }
+
+    .splash-content h1 {
+        font-size: 38px;
+    }
+
+}
+/* =========================================
+   CRAFTPULSE - STEP 2
+========================================= */
+
+
+/* Upload button */
+
+.upload-button {
+    display: inline-block;
+
+    background: #6d1f2b;
+
+    color: white;
+
+    padding: 10px 20px;
+
+    border-radius: 4px;
+
+    cursor: pointer;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+
+.upload-button:hover {
+    background: #8d303b;
+
+    transform: translateY(-2px);
+}
+
+
+/* Image preview */
+
+.image-preview-container {
+    display: none;
+
+    margin-top: 20px;
+
+    width: 100%;
+
+    height: 150px;
+
+    overflow: hidden;
+
+    border-radius: 5px;
+
+    border: 1px solid #ddc2b5;
+}
+
+
+.image-preview-container img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+/* Language selector */
+
+#storyLanguage {
+    width: 100%;
+
+    padding: 11px;
+
+    margin-bottom: 15px;
+
+    border: 1px solid #d6b9aa;
+
+    border-radius: 4px;
+
+    background: #fffaf3;
+
+    color: #4a171c;
+
+    font-family: Arial, sans-serif;
+
+    cursor: pointer;
+}
+
+
+/* Story textarea */
+
+#storyInput {
+    width: 100%;
+
+    resize: vertical;
+
+    padding: 12px;
+
+    border: 1px solid #d6b9aa;
+
+    border-radius: 4px;
+
+    background: #fffaf3;
+
+    color: #4a171c;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+
+    margin-bottom: 12px;
+}
+
+
+#storyInput:focus,
+#storyLanguage:focus {
+    outline: none;
+
+    border-color: #6d1f2b;
+
+    box-shadow: 0 0 0 2px rgba(109, 31, 43, 0.08);
+}
+
+
+/* Voice button */
+
+.voice-button {
+    width: 100%;
+
+    padding: 10px;
+
+    border: 1px solid #6d1f2b;
+
+    background: transparent;
+
+    color: #6d1f2b;
+
+    border-radius: 4px;
+
+    cursor: pointer;
+
+    font-family: Arial, sans-serif;
+
+    transition: 0.3s;
+}
+
+
+.voice-button:hover {
+    background: #6d1f2b;
+
+    color: white;
+}
+
+
+.voice-button.recording {
+    background: #8d303b;
+
+    color: white;
+}
+
+
+/* Voice status */
+
+.voice-status {
+    min-height: 20px;
+
+    margin-top: 10px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 12px;
+
+    color: #8d303b;
+}
+
+
+/* Error */
+
+.craft-error {
+    text-align: center;
+
+    color: #9b3030;
+
+    font-family: Arial, sans-serif;
+
+    margin-top: 20px;
+
+    min-height: 20px;
+}
+/* =========================================
+   PRODUCT IMAGE PREVIEW
+========================================= */
+
+#productImage {
+    display: none;
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: contain;
+
+    border-radius: 4px;
+}
+
+
+#productImageContainer.has-image {
+    padding: 0;
+
+    background: #f4e5d9;
+}
