@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kalasetu | Kala se Kala tak</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ============================= -->
+    <!-- SPLASH SCREEN -->
+    <!-- ============================= -->
+
+    <section id="splash-screen">
+
+        <div class="splash-content">
+
+            <div class="logo-symbol">✦</div>
+
+            <h1>KALASETU</h1>
+
+            <p>Kala se Kala tak</p>
+
+            <div class="loading-line"></div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ============================= -->
+    <!-- MAIN WEBSITE -->
+    <!-- ============================= -->
+
+    <main id="main-content">
+
+        <nav class="navbar">
+
+            <div class="brand">
+                <span class="brand-symbol">✦</span>
+                <span>KALASETU</span>
+            </div>
+
+            <div class="nav-links">
+                <a href="#">Home</a>
+                <a href="#">CraftPulse</a>
+                <a href="#">Artists</a>
+                <a href="#">About</a>
+            </div>
+
+            <div class="language-selector">
+                <button>EN ▾</button>
+            </div>
+
+        </nav>
+
+
+        <!-- HERO SECTION -->
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <p class="small-heading">
+                    WHERE ART MEETS OPPORTUNITY
+                </p>
+
+                <h1>
+                    Your Craft.<br>
+                    Your Story.<br>
+                    <span>Your Journey.</span>
+                </h1>
+
+                <p class="hero-description">
+                    Kalasetu helps artists turn their traditional
+                    crafts and stories into opportunities.
+                </p>
+
+                <button class="primary-button">
+                    ✨ Start with CraftPulse
+                </button>
+
+            </div>
+
+
+            <div class="hero-art">
+
+                <div class="art-circle">
+                    🎨
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CRAFTPULSE -->
+
+        <!-- =========================================
+     CRAFTPULSE
+========================================= -->
+
+<section class="craftpulse" id="craftpulse">
+
+    <div class="section-heading">
+
+        <p>YOUR DIGITAL ASSISTANT</p>
+
+        <h2>CRAFTPULSE</h2>
+
+        <span>Help sell your craft</span>
+
+    </div>
+
+
+    <div class="craft-actions">
+
+        <!-- ============================= -->
+        <!-- TAKE PHOTO -->
+        <!-- ============================= -->
+
+        <div class="action-card">
+
+            <div class="action-icon">
+                📷
+            </div>
+
+            <h3>TAKE PHOTO</h3>
+
+            <p>
+                Capture your beautiful handmade craft.
+            </p>
+
+
+            <label for="craftImage" class="upload-button">
+                📷 Choose Photo
+            </label>
+
+            <input
+                type="file"
+                id="craftImage"
+                accept="image/*"
+                hidden
+            />
+
+
+            <!-- Image preview -->
+
+            <div id="imagePreviewContainer" class="image-preview-container">
+
+                <img
+                    id="imagePreview"
+                    src=""
+                    alt="Craft preview"
+                />
+
+            </div>
+
+        </div>
+
+
+        <!-- ============================= -->
+        <!-- TELL YOUR STORY -->
+        <!-- ============================= -->
+
+        <div class="action-card">
+
+            <div class="action-icon">
+                🎙️
+            </div>
+
+            <h3>TELL YOUR STORY</h3>
+
+            <p>
+                Tell your story in your own language.
+            </p>
+
+
+            <!-- Language -->
+
+            <select id="storyLanguage">
+
+                <option value="english">
+                    🇬🇧 English
+                </option>
+
+                <option value="hindi">
+                    🇮🇳 हिंदी
+                </option>
+
+                <option value="kannada">
+                    🇮🇳 ಕನ್ನಡ
+                </option>
+
+            </select>
+
+
+            <!-- Story -->
+
+            <textarea
+                id="storyInput"
+                placeholder="Tell us about your craft..."
+                rows="5"
+            ></textarea>
+
+
+            <!-- Microphone -->
+
+            <button
+                id="voiceButton"
+                class="voice-button"
+                type="button"
+            >
+                🎙️ Speak Your Story
+            </button>
+
+
+            <p
+                id="voiceStatus"
+                class="voice-status"
+            ></p>
+
+        </div>
+
+    </div>
+
+
+    <!-- ============================= -->
+    <!-- CREATE -->
+    <!-- ============================= -->
+
+    <button
+        id="createCraftButton"
+        class="create-button"
+        type="button"
+    >
+        ✨ CREATE
+    </button>
+
+
+    <!-- Error message -->
+
+    <p
+        id="craftError"
+        class="craft-error"
+    ></p>
+
+
+</section>
+
+
+        <!-- YOUR PRODUCT -->
+
+        <section class="product-section">
+
+            <div class="section-heading">
+
+                <p>YOUR CREATION</p>
+
+                <h2>YOUR PRODUCT</h2>
+
+            </div>
+
+
+            <div class="product-card">
+
+                <div class="product-image" id="productImageContainer">
+
+    <span id="productImagePlaceholder">
+        YOUR PHOTO
+    </span>
+
+    <img
+        id="productImage"
+        src=""
+        alt="Your craft"
+    >
+
+</div>
+
+
+                <div class="product-story">
+
+                    <div class="story-label">
+                        🎙️ Your description
+                    </div>
+
+                    <p>
+                        "This is a handmade terracotta pot.
+                        I made it in 3 days."
+                    </p>
+
+                </div>
+
+
+                <button class="ai-button">
+                    ✨ CREATE WITH AI
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- YOUR LISTING -->
+
+        <section class="listing-section">
+
+            <div class="section-heading">
+
+                <p>AI GENERATED</p>
+
+                <h2>YOUR LISTING</h2>
+
+            </div>
+
+
+            <div class="listing-card">
+
+                <h3>
+                    Handmade Terracotta Pot
+                </h3>
+
+                <p class="listing-description">
+                    Traditional handmade terracotta pot
+                    crafted using local clay and traditional
+                    techniques.
+                </p>
+
+
+                <div class="listing-info">
+
+                    <div>
+                        <span>Material</span>
+                        <strong>Terracotta</strong>
+                    </div>
+
+                    <div>
+                        <span>Keywords</span>
+                        <strong>
+                            handmade, pottery, terracotta
+                        </strong>
+                    </div>
+
+                </div>
+
+
+                <div class="listing-actions">
+
+                    <button>
+                        🔊 LISTEN
+                    </button>
+
+                    <button>
+                        🇮🇳 हिंदी
+                    </button>
+
+                    <button>
+                        🇮🇳 ಕನ್ನಡ
+                    </button>
+
+                    <button>
+                        🇬🇧 English
+                    </button>
+
+                    <button class="share-button">
+                        📤 SHARE
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- FOOTER -->
+
+        <footer>
+
+            <div class="brand">
+                ✦ KALASETU
+            </div>
+
+            <p>
+                Kala se Kala tak
+            </p>
+
+            <p class="copyright">
+                © 2026 Kalasetu. Celebrating every artist.
+            </p>
+
+        </footer>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
